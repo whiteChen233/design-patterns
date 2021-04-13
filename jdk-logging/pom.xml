@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>design-pattern</artifactId>
+        <artifactId>design-patterns</artifactId>
         <groupId>com.github.white</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>

@@ -4,10 +4,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.white</groupId>
-    <artifactId>design-pattern</artifactId>
+    <artifactId>design-patterns</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>design-pattern</name>
+    <name>design-patterns</name>
 
     <modules>
         <module>jdk-logging</module>

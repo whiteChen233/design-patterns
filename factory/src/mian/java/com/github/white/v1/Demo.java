@@ -2,7 +2,7 @@ package com.github.white.v1;
 
 
 /**
- * The type V 1 demo.
+ * The type Demo.
  */
 public class Demo {
 
