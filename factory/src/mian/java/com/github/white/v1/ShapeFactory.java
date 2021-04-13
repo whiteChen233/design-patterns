@@ -1,10 +1,24 @@
-package com.github.white.v2;
+package com.github.white.v1;
 
 import java.util.Objects;
 
+/**
+ * The type Shape factory. 工厂类
+ */
 public class ShapeFactory {
 
-    public Shape getShape(String type) {
+    /**
+     * Instantiates a new Shape factory.
+     */
+    private ShapeFactory() {}
+
+    /**
+     * Gets shape.
+     *
+     * @param type the type
+     * @return the shape
+     */
+    public static Shape getShape(String type) {
         if (Objects.isNull(type)) {
             throw new IllegalArgumentException("type is null");
         }

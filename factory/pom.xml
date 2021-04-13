@@ -4,14 +4,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.github.white</groupId>
-        <artifactId>design-pattern</artifactId>
+        <artifactId>design-patterns</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>factory-pattern</artifactId>
-    <version>${parent.version}</version>
+    <artifactId>factory</artifactId>
 
-    <name>factory-pattern</name>
+    <name>factory</name>
 
     <dependencies>
         <dependency>
