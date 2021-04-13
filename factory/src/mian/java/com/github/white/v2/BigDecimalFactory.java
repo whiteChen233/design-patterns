@@ -1,9 +1,9 @@
-package com.github.white.v1;
+package com.github.white.v2;
 
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class NumberFactoryImpl implements NumberFactory {
+public class BigDecimalFactory implements NumberFactory {
 
     @Override
     public Number parse(String str) {

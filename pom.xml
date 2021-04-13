@@ -11,7 +11,8 @@
 
     <modules>
         <module>jdk-logging</module>
-        <module>factory-pattern</module>
+        <module>factory</module>
+        <module>abstract-factory</module>
     </modules>
 
     <properties>
