@@ -1,9 +1,11 @@
 package com.github.white.v2;
 
+import com.github.white.GlobalLogger;
+
 public class Square implements Shape {
 
     @Override
     public void draw() {
-        System.out.println("画正方形");
+        GlobalLogger.info("画正方形");
     }
 }
