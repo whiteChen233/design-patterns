@@ -11,9 +11,29 @@
 
     <modules>
         <module>jdk-logging</module>
-        <module>factory</module>
+        <module>factory-method</module>
         <module>abstract-factory</module>
         <module>builder</module>
+        <module>prototype</module>
+        <module>singleton</module>
+        <module>proxy</module>
+        <module>adapter</module>
+        <module>bridge</module>
+        <module>decorator</module>
+        <module>facade</module>
+        <module>flyweight</module>
+        <module>composite</module>
+        <module>template-method</module>
+        <module>strategy</module>
+        <module>command</module>
+        <module>chain-of-responsibility</module>
+        <module>state</module>
+        <module>observer</module>
+        <module>mediator</module>
+        <module>iterator</module>
+        <module>visitor</module>
+        <module>memento</module>
+        <module>interpreter</module>
     </modules>
 
     <properties>
