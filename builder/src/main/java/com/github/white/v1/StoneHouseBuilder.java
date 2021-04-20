@@ -6,22 +6,22 @@ public class StoneHouseBuilder implements HouseBuilder {
 
     @Override
     public void buildWalls() {
-        stoneHouse.setWalls("建石头墙");
+        stoneHouse.setWalls("石头墙");
     }
 
     @Override
     public void buildDoors() {
-        stoneHouse.setDoors("建石头门");
+        stoneHouse.setDoors("石头门");
     }
 
     @Override
     public void buildWindows() {
-        stoneHouse.setWindows("建石头窗");
+        stoneHouse.setWindows("石头窗");
     }
 
     @Override
     public void buildRoof() {
-        stoneHouse.setRoof("建石头屋顶");
+        stoneHouse.setRoof("石头屋顶");
     }
 
     @Override

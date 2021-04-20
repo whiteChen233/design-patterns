@@ -6,22 +6,22 @@ public class WoodHouseBuilder implements HouseBuilder {
 
     @Override
     public void buildWalls() {
-       woodHouse.setWalls("建木头墙");
+       woodHouse.setWalls("木头墙");
     }
 
     @Override
     public void buildDoors() {
-        woodHouse.setDoors("建木头门");
+        woodHouse.setDoors("木头门");
     }
 
     @Override
     public void buildWindows() {
-        woodHouse.setWindows("建木头窗");
+        woodHouse.setWindows("木头窗");
     }
 
     @Override
     public void buildRoof() {
-        woodHouse.setRoof("建木屋顶");
+        woodHouse.setRoof("木屋顶");
     }
 
     @Override
