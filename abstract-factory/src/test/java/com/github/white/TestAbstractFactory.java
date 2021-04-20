@@ -1,14 +1,20 @@
 package com.github.white;
 
-public class Demo {
+import org.junit.Assert;
+import org.junit.Test;
 
-    public static void main(String[] args) {
+public class TestAbstractFactory {
+
+    @Test
+    public void test() {
         Computer dell = new DellComputer();
         dell.getKeyboard().use();
         dell.getMouse().use();
+        Assert.assertNotNull(dell);
 
         Computer hp = new HpComputer();
         hp.getKeyboard().use();
         hp.getMouse().use();
+        Assert.assertNotNull(hp);
     }
 }
