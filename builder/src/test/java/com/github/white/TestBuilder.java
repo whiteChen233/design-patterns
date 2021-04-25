@@ -7,8 +7,14 @@ import com.github.white.v1.Director;
 import com.github.white.v1.House;
 import com.github.white.v1.WoodHouseBuilder;
 
+/**
+ * The type Test builder.
+ */
 public class TestBuilder {
 
+    /**
+     * Test v 1.
+     */
     @Test
     public void testV1() {
         WoodHouseBuilder woodHouseBuilder = new WoodHouseBuilder();
