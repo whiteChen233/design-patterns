@@ -1,7 +1,7 @@
 package com.github.white.v1;
 
 /**
- * The interface House builder.
+ * The interface House builder. 接口声明在所有类型生成器中通用的产品构造步骤。
  */
 public interface HouseBuilder {
 
