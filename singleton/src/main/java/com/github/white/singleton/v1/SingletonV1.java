@@ -1,4 +1,4 @@
-package com.github.white.v1;
+package com.github.white.singleton.v1;
 
 import com.github.white.GlobalLogger;
 
