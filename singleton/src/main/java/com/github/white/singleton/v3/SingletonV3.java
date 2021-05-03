@@ -1,5 +1,7 @@
 package com.github.white.singleton.v3;
 
+import com.github.white.GlobalLogger;
+
 /**
  * The type Singleton v 3. 饿汉式
  */
@@ -22,5 +24,12 @@ public class SingletonV3 {
      */
     public static SingletonV3 getInstance() {
         return V2;
+    }
+
+    /**
+     * Do some thing.
+     */
+    public void doSomeThing() {
+        GlobalLogger.info("doSomeThing");
     }
 }

@@ -35,4 +35,11 @@ public class SingletonV1 {
         GlobalLogger.info("获取实例");
         return v1;
     }
+
+    /**
+     * Do some thing.
+     */
+    public void doSomeThing() {
+        GlobalLogger.info("doSomeThing");
+    }
 }
