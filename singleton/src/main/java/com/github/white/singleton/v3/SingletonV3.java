@@ -29,7 +29,7 @@ public class SingletonV3 {
     /**
      * Do some thing.
      */
-    public void doSomeThing() {
-        GlobalLogger.info("doSomeThing");
+    public void doSomething() {
+        GlobalLogger.info("{}: doSomething", this.getClass().getSimpleName());
     }
 }
