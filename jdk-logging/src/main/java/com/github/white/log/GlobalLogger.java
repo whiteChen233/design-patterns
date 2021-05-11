@@ -1,4 +1,4 @@
-package com.github.white;
+package com.github.white.log;
 
 import java.util.Optional;
 import java.util.logging.Level;
