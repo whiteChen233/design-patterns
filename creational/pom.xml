@@ -9,14 +9,18 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jdk-logging</artifactId>
-    <name>jdk-logging</name>
+    <artifactId>creational</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-    </dependencies>
+    <name>creational</name>
+
+    <modules>
+        <module>abstract-factory</module>
+        <module>builder</module>
+        <module>factory-method</module>
+        <module>prototype</module>
+        <module>singleton</module>
+    </modules>
 
 </project>
