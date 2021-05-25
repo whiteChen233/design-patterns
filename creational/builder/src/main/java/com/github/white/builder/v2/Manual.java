@@ -3,10 +3,10 @@ package com.github.white.builder.v2;
 import lombok.Data;
 
 /**
- * The type Car.
+ * The type Manual.
  */
 @Data
-public class Car {
+public class Manual {
 
     /**
      * The Seats.
@@ -27,4 +27,5 @@ public class Car {
      * The Trip computer.
      */
     private boolean tripComputer;
+
 }

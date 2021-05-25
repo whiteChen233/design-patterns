@@ -26,11 +26,15 @@ public interface Builder {
 
     /**
      * Sets trip computer.
+     *
+     * @param support the support
      */
-    void setTripComputer();
+    void setTripComputer(boolean support);
 
     /**
      * Sets gps.
+     *
+     * @param support the support
      */
-    void setGps();
+    void setGps(boolean support);
 }

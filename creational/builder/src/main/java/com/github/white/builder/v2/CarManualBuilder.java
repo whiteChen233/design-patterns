@@ -1,19 +1,19 @@
 package com.github.white.builder.v2;
 
 /**
- * The type Car builder.
+ * The type Car manual builder.
  */
-public class CarBuilder implements Builder {
+public class CarManualBuilder implements Builder {
 
     /**
-     * The Car.
+     * The Manual.
      */
-    private Car car;
+    private Manual manual;
 
     /**
-     * Instantiates a new Car builder.
+     * Instantiates a new Car manual builder.
      */
-    public CarBuilder() {
+    public CarManualBuilder() {
         this.reset();
     }
 
@@ -22,7 +22,7 @@ public class CarBuilder implements Builder {
      */
     @Override
     public void reset() {
-        this.car = new Car();
+        this.manual = new Manual();
     }
 
     /**
@@ -32,7 +32,7 @@ public class CarBuilder implements Builder {
      */
     @Override
     public void setSeats(int number) {
-        this.car.setSeats(number);
+        this.manual.setSeats(number);
     }
 
     /**
@@ -42,7 +42,7 @@ public class CarBuilder implements Builder {
      */
     @Override
     public void setEngine(String engine) {
-        this.car.setEngine(engine);
+        this.manual.setEngine(engine);
     }
 
     /**
@@ -52,7 +52,7 @@ public class CarBuilder implements Builder {
      */
     @Override
     public void setTripComputer(boolean support) {
-        this.car.setTripComputer(support);
+        this.manual.setTripComputer(support);
     }
 
     /**
@@ -62,15 +62,15 @@ public class CarBuilder implements Builder {
      */
     @Override
     public void setGps(boolean support) {
-        this.car.setGps(support);
+        this.manual.setGps(support);
     }
 
     /**
-     * Gets car.
+     * Gets manual.
      *
-     * @return the car
+     * @return the manual
      */
-    public Car getCar() {
-        return this.car;
+    public Manual getManual() {
+        return this.manual;
     }
 }
