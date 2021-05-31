@@ -13,7 +13,7 @@ import com.github.white.proxy.v2.Subject;
 /**
  * The type Proxy test.
  */
-public class ProxyTest {
+public class TestProxy {
 
     /**
      * Test v 1.
