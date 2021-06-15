@@ -11,6 +11,7 @@
 
     <modules>
         <module>jdk-logging</module>
+        <module>principle</module>
         <module>creational</module>
         <module>structural</module>
         <module>behavioral</module>
