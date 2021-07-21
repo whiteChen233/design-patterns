@@ -2,8 +2,16 @@ package com.github.white.principle.single_responsibility;
 
 import com.github.white.log.GlobalLogger;
 
+/**
+ * The type Single responsibility 3.
+ */
 public class SingleResponsibility3 {
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
 
         Vehicles vehicle = new Vehicles();
@@ -11,6 +19,7 @@ public class SingleResponsibility3 {
         vehicle.runRoad("汽车");
 
         vehicle.runAir("飞机");
+        vehicle.runAir("火箭");
     }
 }
 
@@ -19,10 +28,20 @@ public class SingleResponsibility3 {
  */
 class Vehicles {
 
+    /**
+     * Run road.
+     *
+     * @param vehicle the vehicle
+     */
     void runRoad(String vehicle) {
         GlobalLogger.info("{} 在路上跑...", vehicle);
     }
 
+    /**
+     * Run air.
+     *
+     * @param vehicle the vehicle
+     */
     void runAir(String vehicle) {
         GlobalLogger.info("{} 在天上飞...", vehicle);
     }
