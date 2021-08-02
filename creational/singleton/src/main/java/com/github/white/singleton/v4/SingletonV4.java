@@ -4,6 +4,8 @@ import com.github.white.log.GlobalLogger;
 
 /**
  * The type Singleton v 4. DCL,双重锁机制
+ *
+ * 优点：实现了Lazy Loading，并且线程安全，同时保证效率
  */
 public class SingletonV4 {
 
@@ -35,7 +37,7 @@ public class SingletonV4 {
     }
 
     /**
-     * Do some thing.
+     * Do something.
      */
     public void doSomething() {
         GlobalLogger.info("{}: doSomething", this.getClass().getSimpleName());

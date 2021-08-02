@@ -27,6 +27,11 @@ public class TestSingleton {
         SingletonV2 v22 = SingletonV2.getInstance();
         assertSame("获取的实例不相同", v21, v22);
         v21.doSomething();
+
+        SingletonV2.V2 v221 = SingletonV2.V2.getInstance();
+        SingletonV2.V2 v222 = SingletonV2.V2.getInstance();
+        assertSame("获取的实例不相同", v221, v222);
+        v221.doSomething();
     }
 
     @Test
@@ -35,6 +40,11 @@ public class TestSingleton {
         SingletonV3 v32 = SingletonV3.getInstance();
         assertSame("获取的实例不相同", v31, v32);
         v31.doSomething();
+
+        SingletonV3.V2 v321 = SingletonV3.V2.getInstance();
+        SingletonV3.V2 v322 = SingletonV3.V2.getInstance();
+        assertSame("获取的实例不相同", v321, v322);
+        v321.doSomething();
     }
 
     @Test

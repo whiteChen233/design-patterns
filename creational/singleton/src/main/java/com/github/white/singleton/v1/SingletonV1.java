@@ -4,6 +4,9 @@ import com.github.white.log.GlobalLogger;
 
 /**
  * The type Singleton v 1. 懒汉式-线程不安全
+ *
+ * 优点：实现了Lazy Loading，
+ * 缺点：线程不安全
  */
 public class SingletonV1 {
 
@@ -37,7 +40,7 @@ public class SingletonV1 {
     }
 
     /**
-     * Do some thing.
+     * Do something.
      */
     public void doSomething() {
         GlobalLogger.info("{}: doSomething", this.getClass().getSimpleName());
