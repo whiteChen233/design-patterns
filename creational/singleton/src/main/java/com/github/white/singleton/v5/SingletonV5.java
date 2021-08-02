@@ -4,6 +4,8 @@ import com.github.white.log.GlobalLogger;
 
 /**
  * The type Singleton v 5.  使用静态内部类持有当前对象的实例,保证实例是延迟加载的
+ *
+ * 优点：Lazy loading，线程安全
  */
 public class SingletonV5 {
 
@@ -19,13 +21,15 @@ public class SingletonV5 {
      * @return the instance
      */
     public static SingletonV5 getInstance() {
-        return V5Handler.V5;
+        return V5Holder.V5;
     }
 
     /**
-     * The type V 5 handler.
+     * The type V 5 holder.
+     *
+     * 类装载的时候是线程安全的 这里是JVM提供的线程安全保证
      */
-    private static class V5Handler {
+    private static class V5Holder {
         /**
          * The constant V5.
          */
@@ -33,7 +37,7 @@ public class SingletonV5 {
     }
 
     /**
-     * Do some thing.
+     * Do something.
      */
     public void doSomething() {
         GlobalLogger.info("{}: doSomething", this.getClass().getSimpleName());
