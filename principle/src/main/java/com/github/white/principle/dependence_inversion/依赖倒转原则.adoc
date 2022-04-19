@@ -1,40 +1,42 @@
-# 依赖倒转原则
+= 依赖倒转原则
 
-## 定义
+== 定义
 
 依赖倒置原则（Dependence Inversion Principle，DIP）是 Object Mentor 公司总裁罗伯特·马丁（Robert C.Martin）于 1996 年在 C++ Report 上发表的文章。
 
-依赖倒置原则的原始定义为：高层模块不应该依赖低层模块，两者都应该依赖其抽象；抽象不应该依赖细节，细节应该依赖抽象（High level modules shouldnot depend upon low level modules.Both
+依赖倒置原则的原始定义为：高层模块不应该依赖低层模块，两者都应该依赖其抽象；抽象不应该依赖细节，细节应该依赖抽象（High level modules should not depend upon low level modules.Both
 should depend upon abstractions.Abstractions should not depend upon details. Details should depend upon
 abstractions）。其核心思想是：要面向接口编程，不要面向实现编程。
 
-1. 高层模块不应该依赖低层模块，二者都应该依赖其抽象
-2. 抽象不应该依赖细节，细节应该依赖抽象
-3. 依赖倒转（倒置）的中心思想是面向接口编程
-4. 依赖倒转原则是基于这样的设计理念：相对于细节的多变性，抽象的东西要稳定的多。一抽象为基础的架构i以细节为基础的架构要稳定的多。在Java中，抽象指的是接口或者抽象类，细节就是具体的实现类。
-5. 使用接口或者抽象类的目的是制定好规范，而不涉及任何具体实现的操作，把展现细节的任务交给特定的实现类去完成。
+. 高层模块不应该依赖低层模块，二者都应该依赖其抽象
+. 抽象不应该依赖细节，细节应该依赖抽象
+. 依赖倒转（倒置）的中心思想是面向接口编程
+. 依赖倒转原则是基于这样的设计理念：相对于细节的多变性，抽象的东西要稳定的多。一抽象为基础的架构i以细节为基础的架构要稳定的多。在Java中，抽象指的是接口或者抽象类，细节就是具体的实现类。
+. 使用接口或者抽象类的目的是制定好规范，而不涉及任何具体实现的操作，把展现细节的任务交给特定的实现类去完成。
 
-## 依赖关系传递的三种方式
+== 依赖关系传递的三种方式
 
-1. 接口传递
+* 接口传递
 
-    ```java
+[source,java]
+----
     // SomeObject.java
-    public class SomeObject { 
+    public class SomeObject {
         public void doSomething(ObjectInterface iObject) {
             iObject.doSomething();
         }
     }
-    
+
     // ObjectInterface.java
     public interface ObjectInterface {
         void doSomething();
     }
-    ```
+----
 
-2. 构造方法传递
+* 构造方法传递
 
-    ```java
+[source,java]
+----
     // SomeObject.java
     public class SomeObject {
         ObjectInterface objectInterface;
@@ -50,10 +52,12 @@ abstractions）。其核心思想是：要面向接口编程，不要面向实�
     public interface ObjectInterface {
         void doSomething();
     }
-    ```
-3. setter方式传递
+----
 
-    ```java
+* setter方式传递
+
+[source,java]
+----
     // SomeObject.java
     public class SomeObject {
         ObjectInterface objectInterface;
@@ -69,4 +73,4 @@ abstractions）。其核心思想是：要面向接口编程，不要面向实�
     public interface ObjectInterface {
         void doSomething();
     }
-    ```
+----
