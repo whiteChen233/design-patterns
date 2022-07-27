@@ -17,6 +17,10 @@
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.github.white</groupId>
+            <artifactId>jdk-logging</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
