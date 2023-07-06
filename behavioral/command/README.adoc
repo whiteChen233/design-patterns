@@ -8,7 +8,8 @@
 == 角色
 . Invoker: 调用者，发布命令
 . Receiver: 被调用者，执行命令
-. Command: 命令，ConcreteCommand 实现了 Command，将被调用者与具体的动作、操作绑定
+. Command: 抽象命令
+. ConcreteCommand: 实现了 Command，将被调用者与具体的动作、操作绑定
 
 举个栗子: 将军下令要(士兵)买几缸酒回来喝。将军就是调用者，而士兵是被调用者，买酒就是命令
 

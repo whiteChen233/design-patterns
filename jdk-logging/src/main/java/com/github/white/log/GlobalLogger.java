@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 
 /**
  * The type Global logger.
+ * @author White
  */
 public final class GlobalLogger {
 
@@ -18,7 +19,7 @@ public final class GlobalLogger {
     /**
      * The constant LOG.
      */
-    private static final Logger LOG = Logger.getGlobal();
+    private static final Logger LOG = Logger.getLogger(GlobalLogger.class.getSimpleName());
 
     /**
      * Info.
