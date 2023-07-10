@@ -1,7 +1,5 @@
 package com.github.white.interpreter;
 
-import java.util.Map;
-
 import lombok.Data;
 
 /**
@@ -29,16 +27,8 @@ public abstract class SymbolExpression implements AbstractExpression {
      * @param left  the left
      * @param right the right
      */
-    public SymbolExpression(AbstractExpression left, AbstractExpression right) {
+    protected SymbolExpression(AbstractExpression left, AbstractExpression right) {
         this.left = left;
         this.right = right;
     }
-
-    /**
-     * Interpret int. SymbolExpression 需要子类实现 这里是默认实现
-     *
-     * @param map the map
-     * @return the int
-     */
-    public abstract int interpret(Map<String, Integer> map);
 }

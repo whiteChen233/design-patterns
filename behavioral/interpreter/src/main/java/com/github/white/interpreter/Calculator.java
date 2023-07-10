@@ -29,17 +29,24 @@ public class Calculator {
 
         AbstractExpression left;
         AbstractExpression right;
+        boolean skip = false;
 
         for (int i = 0; i < arr.length; i++) {
+            if (skip) {
+                skip = false;
+                continue;
+            }
             switch (arr[i]) {
                 case '+':
+                    skip = true;
                     left = stack.pop();
-                    right = new VariableExpression(String.valueOf(arr[++i]));
+                    right = new VariableExpression(String.valueOf(arr[i + 1]));
                     stack.push(new AdditionExpression(left, right));
                     break;
                 case '-':
+                    skip = true;
                     left = stack.pop();
-                    right = new VariableExpression(String.valueOf(arr[++i]));
+                    right = new VariableExpression(String.valueOf(arr[i + 1]));
                     stack.push(new SubtractionExpression(left, right));
                     break;
                 default:
