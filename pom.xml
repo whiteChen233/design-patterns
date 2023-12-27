@@ -10,7 +10,7 @@
     <name>design-patterns</name>
 
     <modules>
-        <module>jdk-logging</module>
+        <module>logging</module>
         <module>principle</module>
         <module>creational</module>
         <module>structural</module>
@@ -26,9 +26,9 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.github.white</groupId>
-                <artifactId>jdk-logging</artifactId>
-                <version>1.0-SNAPSHOT</version>
+                <groupId>org.apache.logging.log4j</groupId>
+                <artifactId>log4j-slf4j-impl</artifactId>
+                <version>2.17.2</version>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
@@ -40,6 +40,12 @@
                 <artifactId>junit</artifactId>
                 <version>4.13.1</version>
                 <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.github.white</groupId>
+                <artifactId>logging</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
