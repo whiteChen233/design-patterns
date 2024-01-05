@@ -1,7 +1,8 @@
 package com.github.white.abstractfactory;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class TestAbstractFactory {
 
@@ -10,11 +11,11 @@ public class TestAbstractFactory {
         Computer dell = new DellComputer();
         dell.getKeyboard().use();
         dell.getMouse().use();
-        Assert.assertNotNull(dell);
+        Assertions.assertNotNull(dell);
 
         Computer hp = new HpComputer();
         hp.getKeyboard().use();
         hp.getMouse().use();
-        Assert.assertNotNull(hp);
+        Assertions.assertNotNull(hp);
     }
 }

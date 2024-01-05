@@ -1,10 +1,12 @@
 package com.github.white.abstractfactory;
 
-import com.github.white.log.GlobalLogger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * The type Dell mouse. 具体产品由相应的具体工厂创建。
  */
+@Slf4j
 public class DellMouse implements Mouse {
 
     /**
@@ -12,6 +14,6 @@ public class DellMouse implements Mouse {
      */
     @Override
     public void use() {
-        GlobalLogger.info("使用Dell鼠标");
+        log.info("使用Dell鼠标");
     }
 }

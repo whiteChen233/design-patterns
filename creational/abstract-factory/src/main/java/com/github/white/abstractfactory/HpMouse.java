@@ -1,10 +1,12 @@
 package com.github.white.abstractfactory;
 
-import com.github.white.log.GlobalLogger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * The type Hp mouse.
  */
+@Slf4j
 public class HpMouse implements Mouse {
 
     /**
@@ -12,6 +14,6 @@ public class HpMouse implements Mouse {
      */
     @Override
     public void use() {
-        GlobalLogger.info("使用Hp鼠标");
+        log.info("使用Hp鼠标");
     }
 }

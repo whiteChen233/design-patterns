@@ -1,10 +1,12 @@
 package com.github.white.abstractfactory;
 
-import com.github.white.log.GlobalLogger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * The type Hp keyboard.
  */
+@Slf4j
 public class HPKeyboard implements Keyboard {
 
     /**
@@ -12,6 +14,6 @@ public class HPKeyboard implements Keyboard {
      */
     @Override
     public void use() {
-        GlobalLogger.info("使用Hp键盘");
+        log.info("使用Hp键盘");
     }
 }
