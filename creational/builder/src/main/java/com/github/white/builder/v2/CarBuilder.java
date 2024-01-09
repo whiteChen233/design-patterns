@@ -1,76 +1,32 @@
 package com.github.white.builder.v2;
 
 /**
- * The type Car builder.
+ * The interface Car builder.
  */
-public class CarBuilder implements Builder {
-
-    /**
-     * The Car.
-     */
-    private Car car;
-
-    /**
-     * Instantiates a new Car builder.
-     */
-    public CarBuilder() {
-        this.reset();
-    }
+public interface CarBuilder {
 
     /**
      * Reset.
      */
-    @Override
-    public void reset() {
-        this.car = new Car();
-    }
+    void reset();
 
     /**
-     * Sets seats.
-     *
-     * @param number the number
+     * Assembly seats.
      */
-    @Override
-    public void setSeats(int number) {
-        this.car.setSeats(number);
-    }
+    void assemblySeats();
 
     /**
-     * Sets engine.
-     *
-     * @param engine the engine
+     * Assembly engine.
      */
-    @Override
-    public void setEngine(String engine) {
-        this.car.setEngine(engine);
-    }
+    void assemblyEngine();
 
     /**
-     * Sets trip computer.
-     *
-     * @param support the support
+     * Assembly trip computer.
      */
-    @Override
-    public void setTripComputer(boolean support) {
-        this.car.setTripComputer(support);
-    }
+    void assemblyTripComputer();
 
     /**
-     * Sets gps.
-     *
-     * @param support the support
+     * Assembly gps.
      */
-    @Override
-    public void setGps(boolean support) {
-        this.car.setGps(support);
-    }
-
-    /**
-     * Gets car.
-     *
-     * @return the car
-     */
-    public Car getCar() {
-        return this.car;
-    }
+    void assemblyGps();
 }
