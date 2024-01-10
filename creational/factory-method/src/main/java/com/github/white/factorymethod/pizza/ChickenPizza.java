@@ -1,26 +1,24 @@
 package com.github.white.factorymethod.pizza;
 
-import com.github.white.log.GlobalLogger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * The type Chicken pizza.
  */
-public class ChickenPizza extends Pizza {
-
-    /**
-     * Instantiates a new Chicken pizza.
-     *
-     * @param name the name
-     */
-    public ChickenPizza(String name) {
-        super(name);
-    }
+@Slf4j
+public class ChickenPizza implements Pizza {
 
     /**
      * Prepare.
      */
     @Override
     public void prepare() {
-        GlobalLogger.info("准备{}的材料:{}", getName(), "鸡胸肉");
+        log.info("准备{}的材料:{}", getName(), "鸡胸肉");
+    }
+
+    @Override
+    public String getName() {
+        return "劲爆鸡肉披萨";
     }
 }

@@ -23,10 +23,10 @@ public class MeatFoodOrderPizza extends OrderPizza {
     Pizza preparePizza() {
         String type = getType();
         if ("chicken".equals(type)) {
-            return new ChickenPizza("劲爆鸡肉披萨");
+            return new ChickenPizza();
         }
         if ("beef".equals(type)) {
-            return new BeefPizza("真香牛肉披萨");
+            return new BeefPizza();
         }
         return null;
     }

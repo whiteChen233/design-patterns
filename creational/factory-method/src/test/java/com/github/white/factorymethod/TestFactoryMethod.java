@@ -1,16 +1,18 @@
 package com.github.white.factorymethod;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-import com.github.white.log.GlobalLogger;
 import com.github.white.factorymethod.v1.Shape;
 import com.github.white.factorymethod.v1.ShapeFactory;
 import com.github.white.factorymethod.v2.BigDecimalFactory;
 import com.github.white.factorymethod.v2.LongFactory;
 import com.github.white.factorymethod.v2.NumberFactory;
 
-public class TestFactoryMethod {
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
+class TestFactoryMethod {
 
     /**
      * 简单工厂模式：是由一个工厂对象决定创建出哪一种产品类的实例。<br>
@@ -20,7 +22,7 @@ public class TestFactoryMethod {
      *     3.具体产品（Concrete Product）角色：简单工厂所创建的具体实例对象，这些具体的产品往往都拥有共同的父类。<br>
      */
     @Test
-    public void testV1() {
+    void testV1() {
         // 获取circle
         Shape s1 = ShapeFactory.getShape("circle");
         s1.draw();
@@ -31,9 +33,9 @@ public class TestFactoryMethod {
         Shape s3 = ShapeFactory.getShape("square");
         s3.draw();
 
-        Assert.assertNotNull(s1);
-        Assert.assertNotNull(s2);
-        Assert.assertNotNull(s3);
+        Assertions.assertNotNull(s1);
+        Assertions.assertNotNull(s2);
+        Assertions.assertNotNull(s3);
     }
 
     /**
@@ -45,15 +47,15 @@ public class TestFactoryMethod {
      * 在例子中，产品是Number；具体产品是BigDecimal、Long；创建者是NumberFactory；具体创建者是BigDecimalFactory、LongFactory
      */
     @Test
-    public void testV2() {
+    void testV2() {
         NumberFactory bigDecimalFactory = new BigDecimalFactory();
         Number num1 = bigDecimalFactory.parse("123.456");
-        GlobalLogger.info("number: {}", num1);
-        Assert.assertNotNull(num1);
+        log.info("number: {}", num1);
+        Assertions.assertNotNull(num1);
 
         NumberFactory longFactory = new LongFactory();
         Number num2 = longFactory.parse("123456");
-        GlobalLogger.info("number: {}", num2);
-        Assert.assertNotNull(num2);
+        log.info("number: {}", num2);
+        Assertions.assertNotNull(num2);
     }
 }

@@ -1,58 +1,46 @@
 package com.github.white.factorymethod.pizza;
 
-import com.github.white.log.GlobalLogger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * The type Pizza.
  */
-public abstract class Pizza {
-
-    /**
-     * The Name.
-     */
-    private final String name;
-
-    /**
-     * Instantiates a new Pizza.
-     *
-     * @param name the name
-     */
-    Pizza(String name) {
-        this.name = name;
-    }
+public interface Pizza {
 
     /**
      * Prepare.
      */
-    public abstract void prepare();
+    void prepare();
 
     /**
      * Gets name.
      *
      * @return the name
      */
-    public String getName() {
-        return name;
-    }
+    String getName();
 
     /**
      * Bake.
      */
-    public void bake() {
-        GlobalLogger.info("烘烤{}", getName());
+    default void bake() {
+        Log.log.info("烘烤{}", this.getName());
     }
 
     /**
      * Cut.
      */
-    public void cut() {
-        GlobalLogger.info("给{}切块", getName());
+    default void cut() {
+        Log.log.info("给{}切块", this.getName());
     }
 
     /**
      * Box.
      */
-    public void box() {
-        GlobalLogger.info("给{}装盒", getName());
+    default void box() {
+        Log.log.info("给{}装盒", this.getName());
     }
+
+    @Slf4j
+    class Log {}
 }

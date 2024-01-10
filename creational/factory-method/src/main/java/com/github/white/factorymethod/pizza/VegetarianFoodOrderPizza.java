@@ -21,10 +21,10 @@ public class VegetarianFoodOrderPizza extends OrderPizza {
     Pizza preparePizza() {
         String type = getType();
         if ("fruit".equals(type)) {
-            return new FruitPizza("水果大满贯披萨");
+            return new FruitPizza();
         }
         if ("vegetable".equals(type)) {
-           return new VegetablesPizza("蔬菜鲜鲜披萨");
+           return new VegetablesPizza();
         }
         return null;
     }

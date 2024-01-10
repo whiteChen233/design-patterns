@@ -1,26 +1,29 @@
 package com.github.white.factorymethod.pizza;
 
-import com.github.white.log.GlobalLogger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * The type Fruit pizza.
  */
-public class FruitPizza extends Pizza {
-
-    /**
-     * Instantiates a new Fruit pizza.
-     *
-     * @param name the name
-     */
-    public FruitPizza(String name) {
-        super(name);
-    }
+@Slf4j
+public class FruitPizza implements Pizza {
 
     /**
      * Prepare.
      */
     @Override
     public void prepare() {
-        GlobalLogger.info("准备{}的材料:{}", getName(), "水果");
+        log.info("准备{}的材料:{}", this.getName(), "水果");
+    }
+
+    /**
+     * Gets name.
+     *
+     * @return the name
+     */
+    @Override
+    public String getName() {
+        return "水果大满贯披萨";
     }
 }

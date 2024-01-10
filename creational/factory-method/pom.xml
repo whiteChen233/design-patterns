@@ -12,15 +12,4 @@
     <artifactId>factory-method</artifactId>
     <name>factory-method</name>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.github.white</groupId>
-            <artifactId>jdk-logging</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-    </dependencies>
-
 </project>
