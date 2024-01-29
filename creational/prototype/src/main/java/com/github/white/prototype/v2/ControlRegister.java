@@ -3,10 +3,13 @@ package com.github.white.prototype.v2;
 import java.util.ArrayList;
 import java.util.List;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * The type Control register. 原型注册表 （Prototype Registry） 提供了一种访问常用原型的简单方法， 其中存储了一系列可供随时复制的预生成对象。
  * 最简单的注册表原型是一个 名称 → 原型的哈希表。 但如果需要使用名称以外的条件进行搜索， 你可以创建更加完善的注册表版本。
  */
+@Slf4j
 public class ControlRegister {
 
     /**
@@ -48,5 +51,9 @@ public class ControlRegister {
      */
     public Control getByName(String name) {
         return this.controls.stream().filter(i -> i.getName().equals(name)).findFirst().orElse(null);
+    }
+
+    public void print() {
+        this.controls.forEach(i -> log.info("{}", i));
     }
 }

@@ -1,10 +1,12 @@
 package com.github.white.prototype.v2;
 
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * The type Button.
  */
+@ToString
 @Data
 public class Button implements Control {
 

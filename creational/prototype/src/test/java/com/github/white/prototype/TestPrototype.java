@@ -7,8 +7,8 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.stream.Stream;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import com.github.white.prototype.v1.Circle;
 import com.github.white.prototype.v1.Rectangle;
@@ -16,16 +16,19 @@ import com.github.white.prototype.v1.Shape;
 import com.github.white.prototype.v2.Button;
 import com.github.white.prototype.v2.ControlRegister;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * The type Test prototype.
  */
-public class TestPrototype {
+@Slf4j
+class TestPrototype {
 
     /**
      * Test v 1.
      */
     @Test
-    public void testV1() {
+    void testV1() {
         Map<String, List<Shape>> shapes = new HashMap<>();
         Circle circle = new Circle();
         circle.setX(10);
@@ -43,14 +46,16 @@ public class TestPrototype {
 
         shapes.forEach((k, v) -> v.add(v.get(0).cloneShape()));
 
-        Assert.assertTrue(shapes.entrySet().stream().noneMatch(i -> i.getValue().get(0) == i.getValue().get(1)));
+        shapes.forEach((k, v) -> v.forEach(item -> log.info("{}: {}", k, item)));
+
+        Assertions.assertTrue(shapes.entrySet().stream().noneMatch(i -> i.getValue().get(0) == i.getValue().get(1)));
     }
 
     /**
      * Test v 2.
      */
     @Test
-    public void testV2() {
+    void testV2() {
         ControlRegister controlRegister = new ControlRegister();
 
         Button b1 = new Button("btn1", "b1");
@@ -65,6 +70,8 @@ public class TestPrototype {
         Button b1Tmp = (Button) controlRegister.getById("btn1");
         Button b2Tmp = (Button) controlRegister.getByName("btn2");
 
-        Assert.assertTrue(Stream.of(b1Tmp, b2Tmp).anyMatch(Objects::nonNull));
+        controlRegister.print();
+
+        Assertions.assertTrue(Stream.of(b1Tmp, b2Tmp).anyMatch(Objects::nonNull));
     }
 }

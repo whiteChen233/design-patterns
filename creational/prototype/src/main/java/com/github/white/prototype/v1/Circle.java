@@ -2,10 +2,12 @@ package com.github.white.prototype.v1;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * The type Circle.
  */
+@ToString
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class Circle extends Shape {

@@ -2,11 +2,13 @@ package com.github.white.prototype.v1;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * The type Rectangle.  具体原型。克隆的方法会创建一个新对象并将其传递给构造函数。
  * 直到构造行数运行完成前，它都拥有指向新克隆对象的引用。因此，任何人都无法访问未完全生成的克隆对象。这可以保持克隆结果的一致性。
  */
+@ToString
 @EqualsAndHashCode(callSuper = true)
 @Data
 public class Rectangle extends Shape {
