@@ -1,18 +1,29 @@
 package com.github.white.singleton.v5;
 
-import com.github.white.log.GlobalLogger;
+
+import org.slf4j.LoggerFactory;
+
+import com.github.white.singleton.Helper;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
- * The type Singleton v 5.  使用静态内部类持有当前对象的实例,保证实例是延迟加载的
+ * The enum Singleton v 5.
+ * <p>
+ * 优点：简单，线程安全，还能防止反序列化来重新创建对象
  *
- * 优点：Lazy loading，线程安全
+ * @author White
  */
-public class SingletonV5 {
+@Slf4j
+public enum SingletonV5 {
 
     /**
-     * Instantiates a new Singleton v 5.
+     * V 5 singleton v 5.  v5就是枚举类的唯一实例
      */
-    private SingletonV5() {
+    V5;
+
+    SingletonV5() {
+        LoggerFactory.getLogger(this.getClass()).info("Create the Instance");
     }
 
     /**
@@ -21,25 +32,14 @@ public class SingletonV5 {
      * @return the instance
      */
     public static SingletonV5 getInstance() {
-        return V5Holder.V5;
-    }
-
-    /**
-     * The type V 5 holder.
-     *
-     * 类装载的时候是线程安全的 这里是JVM提供的线程安全保证
-     */
-    private static class V5Holder {
-        /**
-         * The constant V5.
-         */
-        private static final SingletonV5 V5 = new SingletonV5();
+        Helper.logGetInstance(log);
+        return V5;
     }
 
     /**
      * Do something.
      */
     public void doSomething() {
-        GlobalLogger.info("{}: doSomething", this.getClass().getSimpleName());
+        Helper.logDoSomething(log, this);
     }
 }
