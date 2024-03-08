@@ -26,6 +26,9 @@ hs_err_pid*
 .idea
 *.iml
 
+# VS Code
+.vscode
+
 # eclipse
 .settings
 .classpath

@@ -1,7 +1,5 @@
 package com.github.white.builder.v2;
 
-import lombok.Data;
-
 /**
  * The type Manual.
  */

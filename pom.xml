@@ -10,11 +10,11 @@
     <name>design-patterns</name>
 
     <modules>
+        <module>behavioral</module>
+        <module>creational</module>
         <module>logging</module>
         <module>principle</module>
-        <module>creational</module>
         <module>structural</module>
-        <module>behavioral</module>
     </modules>
 
     <properties>
@@ -27,21 +27,23 @@
         <dependencies>
             <dependency>
                 <groupId>org.apache.logging.log4j</groupId>
-                <artifactId>log4j-slf4j-impl</artifactId>
-                <version>2.17.2</version>
+                <artifactId>log4j-bom</artifactId>
+                <version>2.20.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.junit</groupId>
+                <artifactId>junit-bom</artifactId>
+                <version>5.9.3</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>1.18.22</version>
             </dependency>
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.13.1</version>
-                <scope>test</scope>
-            </dependency>
-
             <dependency>
                 <groupId>com.github.white</groupId>
                 <artifactId>logging</artifactId>
