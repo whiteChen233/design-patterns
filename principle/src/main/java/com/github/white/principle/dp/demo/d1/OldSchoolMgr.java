@@ -4,14 +4,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import com.github.white.log.GlobalLogger;
 import com.github.white.principle.dp.demo.entity.Teacher;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * 直接朋友： [Teacher、CollegeMgr], CollegeTeacher 不是 SchoolMgr 的直接朋友，违反迪米特法则
  *
  * @author White
  */
+@Slf4j
 public class OldSchoolMgr {
 
     public List<Teacher> getAllTeachers() {
@@ -20,8 +22,8 @@ public class OldSchoolMgr {
 
     public void print(OldCollegeMgr cm) {
         // CollegeTeacher 以局部变量出现在 SchoolMgr 类中，违反了迪米特法则
-        cm.getAllCollegeTeachers().forEach(i -> GlobalLogger.info("学院老师 id:{}", i.getId()));
-        GlobalLogger.info("----------------------------");
-        this.getAllTeachers().forEach(i -> GlobalLogger.info("学校老师 id:{}", i.getId()));
+        cm.getAllCollegeTeachers().forEach(i -> log.info("学院老师 id:{}", i.getId()));
+        log.info("----------------------------");
+        this.getAllTeachers().forEach(i -> log.info("学校老师 id:{}", i.getId()));
     }
 }

@@ -1,6 +1,5 @@
 package com.github.white.principle.lsp.demo.d2;
 
-import com.github.white.log.GlobalLogger;
 
 /**
  * @author White

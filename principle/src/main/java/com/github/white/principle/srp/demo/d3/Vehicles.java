@@ -1,17 +1,19 @@
 package com.github.white.principle.srp.demo.d3;
 
-import com.github.white.log.GlobalLogger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author White
  */
+@Slf4j
 public class Vehicles {
 
     public void runRoad(String vehicle) {
-        GlobalLogger.info("{} 在路上跑...", vehicle);
+        log.info("{} 在路上跑...", vehicle);
     }
 
     public void runAir(String vehicle) {
-        GlobalLogger.info("{} 在天上飞...", vehicle);
+        log.info("{} 在天上飞...", vehicle);
     }
 }

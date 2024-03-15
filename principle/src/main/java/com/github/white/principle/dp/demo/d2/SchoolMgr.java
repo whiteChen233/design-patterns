@@ -4,12 +4,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-import com.github.white.log.GlobalLogger;
 import com.github.white.principle.dp.demo.entity.Teacher;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author White
  */
+@Slf4j
 public class SchoolMgr {
     public List<Teacher> getAllTeachers() {
         return IntStream.range(1, 10).mapToObj(Teacher::new).collect(Collectors.toList());
@@ -17,7 +19,7 @@ public class SchoolMgr {
 
     public void print(CollegeMgr cm) {
         cm.print();
-        GlobalLogger.info("----------------------------");
-        this.getAllTeachers().forEach(i -> GlobalLogger.info("学校老师 id:{}", i.getId()));
+        log.info("----------------------------");
+        this.getAllTeachers().forEach(i -> log.info("学校老师 id:{}", i.getId()));
     }
 }

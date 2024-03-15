@@ -1,10 +1,12 @@
-package com.github.white.principle.crp.method;
+package com.github.white.principle.crp.demo;
 
-import com.github.white.log.GlobalLogger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author White
  */
+@Slf4j
 public class MethodComposite2 {
 
     private MethodComposite2() {
@@ -12,11 +14,11 @@ public class MethodComposite2 {
 
     public static class ParentClass {
         public void m1() {
-            GlobalLogger.info("ParentClass method 1");
+            log.info("ParentClass method 1");
         }
 
         public void m2() {
-            GlobalLogger.info("ParentClass method 2");
+            log.info("ParentClass method 2");
         }
     }
 
@@ -36,7 +38,7 @@ public class MethodComposite2 {
         }
 
         public void m3() {
-            GlobalLogger.info("ChildClass method");
+            log.info("ChildClass method");
         }
     }
 }

@@ -1,25 +1,29 @@
-package com.github.white.principle.crp.method;
+package com.github.white.principle.crp.demo;
 
-import com.github.white.log.GlobalLogger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author White
  */
+@Slf4j
 public class MethodComposite3 {
     private MethodComposite3() {
     }
 
     public static class ParentClass {
         public void m1() {
-            GlobalLogger.info("ParentClass method 1");
+            log.info("ParentClass method 1");
         }
 
         public void m2() {
-            GlobalLogger.info("ParentClass method 2");
+            log.info("ParentClass method 2");
         }
     }
 
-    // 在B中定义一个A的成员变量，并直接new出来
+    /**
+     * 在B中定义一个A的成员变量，并直接new出来
+     */
     public static class ChildClass {
         private final ParentClass parentClass;
 
@@ -35,7 +39,7 @@ public class MethodComposite3 {
         }
 
         public void m3() {
-            GlobalLogger.info("ChildClass method");
+            log.info("ChildClass method");
         }
     }
 }

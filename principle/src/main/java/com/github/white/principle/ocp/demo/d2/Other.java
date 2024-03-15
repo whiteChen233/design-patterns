@@ -1,14 +1,16 @@
 package com.github.white.principle.ocp.demo.d2;
 
-import com.github.white.log.GlobalLogger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author White
  */
+@Slf4j
 public class Other implements Shape {
 
     @Override
     public void draw() {
-        GlobalLogger.info("画其他图形");
+        log.info("画其他图形");
     }
 }

@@ -1,7 +1,7 @@
 package com.github.white.principle.isp.demo.d1;
 
 
-import com.github.white.log.GlobalLogger;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author White
@@ -19,6 +19,9 @@ public interface AllInOneInterface {
     void method5();
 
     default void log(int idx) {
-        GlobalLogger.info("调用了 {} 实现的 method {}", this.getClass().getSimpleName(), idx);
+        Log.log.info("调用了 {} 实现的 method {}", this.getClass().getSimpleName(), idx);
     }
+
+    @Slf4j
+    class Log {}
 }

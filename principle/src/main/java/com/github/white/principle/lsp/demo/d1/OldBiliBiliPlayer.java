@@ -1,18 +1,20 @@
 package com.github.white.principle.lsp.demo.d1;
 
-import com.github.white.log.GlobalLogger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author White
  */
+@Slf4j
 public class OldBiliBiliPlayer {
 
     public void play(OldCommonUser oldCommonUser) {
-        GlobalLogger.info("普通用户 {} 播放番剧", oldCommonUser.getId());
+        log.info("普通用户 {} 播放番剧", oldCommonUser.getId());
     }
 
     public void play(OldVipUser oldVipUser) {
-        GlobalLogger.info("VIP用户 {} 播放番剧", oldVipUser.getId());
+        log.info("VIP用户 {} 播放番剧", oldVipUser.getId());
     }
 
 }

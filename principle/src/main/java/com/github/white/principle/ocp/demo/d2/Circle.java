@@ -1,13 +1,15 @@
 package com.github.white.principle.ocp.demo.d2;
 
-import com.github.white.log.GlobalLogger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author White
  */
+@Slf4j
 public class Circle implements Shape {
     @Override
     public void draw() {
-        GlobalLogger.info("画圆形");
+        log.info("画圆形");
     }
 }

@@ -1,10 +1,12 @@
 package com.github.white.principle.ocp.demo.d1;
 
-import com.github.white.log.GlobalLogger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author White
  */
+@Slf4j
 public class OldDrawer {
 
     public void drawShape(OldShape s) {
@@ -17,10 +19,10 @@ public class OldDrawer {
     }
 
     private void drawRectangle() {
-        GlobalLogger.info("画矩形");
+        log.info("画矩形");
     }
 
     private void drawCircle() {
-        GlobalLogger.info("画圆形");
+        log.info("画圆形");
     }
 }

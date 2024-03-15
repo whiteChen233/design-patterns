@@ -1,12 +1,14 @@
 package com.github.white.principle.srp.demo.d1;
 
-import com.github.white.log.GlobalLogger;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author White
  */
+@Slf4j
 public class Vehicle {
     public void run(String vehicle) {
-        GlobalLogger.info("{} 在路上跑...", vehicle);
+        log.info("{} 在路上跑...", vehicle);
     }
 }
