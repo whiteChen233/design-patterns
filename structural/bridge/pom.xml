@@ -15,12 +15,9 @@
     <dependencies>
         <dependency>
             <groupId>com.github.white</groupId>
-            <artifactId>jdk-logging</artifactId>
+            <artifactId>logging</artifactId>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
+
     </dependencies>
 
 </project>

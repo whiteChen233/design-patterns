@@ -13,13 +13,10 @@
     <name>template-method</name>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>com.github.white</groupId>
-            <artifactId>jdk-logging</artifactId>
+            <artifactId>logging</artifactId>
         </dependency>
     </dependencies>
 
